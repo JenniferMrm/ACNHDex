@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 100%;
   height: 100vh;
-  background-color: $neutral-color-10;
+  background-color: $tertiary-color-1;
   top: 0;
   bottom: 0;
   z-index: 2;
@@ -22,8 +22,11 @@
     display: flex;
     flex-direction: column;
     padding: $spacing-xxl 0 0 $spacing-xl;
+    color: $neutral-color-00;
 
-    &__icon-arrow {
+    &__icon-cross {
+      width: min-content;
+      align-self: flex-end;
       text-align: end;
       margin-right: $spacing-xl;
 
@@ -47,6 +50,12 @@
 
         &__title {
           @include text-body-m;
+
+          transition: $basic-transition;
+
+          &:hover {
+            color: $secondary-color-2;
+          }
         }
       }
     }
@@ -127,17 +136,22 @@
         }
       }
 
-      &__title {
-        @include text-heading-l;
+      &__link {
+        color: inherit;
+        text-decoration: none;
 
-        margin: 0;
+        &__title {
+          @include text-heading-l;
 
-        @media #{$screen-tablet} {
-          @include text-heading-m;
-        }
+          margin: 0;
 
-        @media #{$screen-above-tablet} {
-          @include text-heading-xl;
+          @media #{$screen-tablet} {
+            @include text-heading-m;
+          }
+
+          @media #{$screen-above-tablet} {
+            @include text-heading-xl;
+          }
         }
       }
 
