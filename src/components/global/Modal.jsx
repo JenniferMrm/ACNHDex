@@ -8,7 +8,7 @@ function Modal({ onClose, open }) {
     <div className={modalClassName}>
       <div className="modal__content">
         <div className="modal__content__icon-arrow" onClick={onClose}>
-          <i className="fi fi-br-arrow-right"></i>
+          <i className="fi fi-br-cross"></i>
         </div>
         <div className="modal__content__icon">
           <i className="fi fi-br-fox"></i>
