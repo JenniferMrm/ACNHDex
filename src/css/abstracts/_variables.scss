@@ -27,6 +27,8 @@ $tertiary-color-3: #017c74;
 $tertiary-color-4: #f7d359;
 
 /* Transitions */
+$basic-transition: all 0.3s ease;
+$modal-transition: opacity 0.3s linear, left 0.3s ease-out;
 
 /* Box Shadow */
 
