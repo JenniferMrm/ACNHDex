@@ -25,7 +25,9 @@ function Navbar(props) {
               <img className="navbar__container__logo__container__img" src="./assets/logo/index.png" alt="animal-crossing-logo-nintendo" />
             </div>
           </Link>
-          <h1 className="navbar__container__logo__title">ACNHDex</h1>
+          <Link to={"/"} class="navbar__container__logo__link">
+            <h1 className="navbar__container__logo__link__title">ACNHDex</h1>
+          </Link>
         </div>
         <div className="navbar__container__links">
           <div className="navbar__container__links__item">

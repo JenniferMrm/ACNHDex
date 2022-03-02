@@ -4,7 +4,10 @@
 @import "abstracts/base";
 
 /* globals */
-@import "globals/navigation";
 
 /* segments */
-@import "segments/footer";
+@import "segments/about";
+
+/* layout */
+@import "layout/navigation";
+@import "layout/footer";

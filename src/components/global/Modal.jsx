@@ -7,7 +7,7 @@ function Modal({ onClose, open }) {
   return (
     <div className={modalClassName}>
       <div className="modal__content">
-        <div className="modal__content__icon-arrow" onClick={onClose}>
+        <div className="modal__content__icon-cross" onClick={onClose}>
           <i className="fi fi-br-cross"></i>
         </div>
         <div className="modal__content__icon">

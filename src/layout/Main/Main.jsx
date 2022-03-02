@@ -1,13 +1,13 @@
-import React from 'react';
-import Nav from '@components/segments/Nav';
-import Footer from '@components/segments/Footer';
+import React from "react";
+import Navbar from "@components/segments/Navbar";
+import Footer from "@components/segments/Footer";
 
 function Main(props) {
   const { children } = props;
   return (
     <div>
-      <Nav />
-      { children }
+      <Navbar />
+      {children}
       <Footer />
     </div>
   );

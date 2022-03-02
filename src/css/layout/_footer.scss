@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-color-3;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding: $spacing-xs;
+
+  p {
+    @include text-body-xs;
+
+    margin: 0 $spacing-xs 0 0;
+    padding: 0;
+    color: $tertiary-color-3;
+
+    .link {
+      color: inherit;
+    }
+  }
+}

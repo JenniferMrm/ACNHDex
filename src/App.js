@@ -1,24 +1,75 @@
 import React from "react";
 import "@/css/style.scss";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import Modal from "@components/global/Modal";
-import Navbar from "./components/global/Navbar";
-// import Main from "@layout/Main/Main";
-// import Home from "@view/Home/Home";
+import Main from "@layout/Main/Main";
+import Home from "@view/Home/Home";
+import Villagers from "@view/Villagers/Villagers";
+import Fishes from "@view/Fishes/Fishes";
+import Bugs from "@view/Bugs/Bugs";
+import Fossils from "@view/Fossils/Fossils";
+import Art from "@view/Art/Art";
+import About from "@view/About/About";
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* <Route
+        <Route
           path="/"
           element={
             <Main>
               <Home />
             </Main>
           }
-        /> */}
-        <Route path="/" element={<Navbar />} />
+        />
+        <Route
+          path="/villagers"
+          element={
+            <Main>
+              <Villagers />
+            </Main>
+          }
+        />
+        <Route
+          path="/fishes"
+          element={
+            <Main>
+              <Fishes />
+            </Main>
+          }
+        />
+        <Route
+          path="/bugs"
+          element={
+            <Main>
+              <Bugs />
+            </Main>
+          }
+        />
+        <Route
+          path="/fossils"
+          element={
+            <Main>
+              <Fossils />
+            </Main>
+          }
+        />
+        <Route
+          path="/art"
+          element={
+            <Main>
+              <Art />
+            </Main>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <Main>
+              <About />
+            </Main>
+          }
+        />
       </Routes>
     </Router>
   );
