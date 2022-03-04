@@ -1,7 +1,12 @@
 import React from "react";
+import VillagersList from "@components/segments/VillagersList";
 
 function Villagers(props) {
-  return <div></div>;
+  return (
+    <div>
+      <VillagersList />
+    </div>
+  );
 }
 
 export default Villagers;

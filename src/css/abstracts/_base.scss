@@ -1,6 +1,7 @@
 body {
+  @include main-pattern;
+
   margin: 0;
   color: $neutral-color-90;
   font-family: $body-font;
-  background-color: $neutral-color-10;
 }
