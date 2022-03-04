@@ -4,6 +4,7 @@
 @import "abstracts/base";
 
 /* globals */
+@import "globals/card";
 
 /* segments */
 @import "segments/about";
@@ -11,3 +12,6 @@
 /* layout */
 @import "layout/navigation";
 @import "layout/footer";
+
+/* view */
+@import "view/villagers";
