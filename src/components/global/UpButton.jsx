@@ -12,7 +12,7 @@ function UpButton({ showBelow }) {
   };
 
   const handleClick = () => {
-    window[`scrollTo`]({ top: 0, behaviour: `smooth` });
+    window[`scrollTo`]({ top: 0 });
   };
 
   useEffect(() => {
