@@ -1,7 +1,12 @@
 import React from "react";
+import BugsList from "@components/segments/BugsList";
 
 function Bugs(props) {
-  return <div></div>;
+  return (
+    <div className="bugs">
+      <BugsList />
+    </div>
+  );
 }
 
 export default Bugs;
