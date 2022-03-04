@@ -3,7 +3,7 @@ import VillagersList from "@components/segments/VillagersList";
 
 function Villagers(props) {
   return (
-    <div>
+    <div className="villagers">
       <VillagersList />
     </div>
   );

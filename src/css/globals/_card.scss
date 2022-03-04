@@ -1,5 +1,5 @@
 .card {
-  margin: $spacing-l;
+  margin: $spacing-m;
   background-color: $neutral-color-00;
   width: 250px;
   height: 400px;
@@ -24,7 +24,6 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
-    margin-top: $spacing-s;
 
     p {
       margin: $spacing-s 0 0 $spacing-m;
