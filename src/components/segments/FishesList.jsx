@@ -1,8 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import CreatureCard from "@/components/global/CreatureCard";
 
 function FishesList(props) {
   const [fishes, setFishes] = useState([]);
+
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
 
   useEffect(() => {
     const getFishes = () => {
@@ -14,11 +19,11 @@ function FishesList(props) {
           const formattedFishes = fishesKeys.map((key) => {
             return {
               image: data[key].image_uri,
-              name: data[key].name["name-EUfr"],
+              name: capitalizeFirstLetter(data[key].name["name-EUfr"]),
               location: data[key].availability["location"],
               rarity: data[key].availability["rarity"],
               price: data[key].price,
-              catchPhrase: data[key]["catchPhrase"],
+              infos: data[key]["catch-phrase"],
             };
           });
           setFishes(formattedFishes);
@@ -29,7 +34,9 @@ function FishesList(props) {
 
   return (
     <div className="fishes-list">
-      <h2>Fishes</h2>
+      {fishes.map((fish, index) => {
+        return <CreatureCard key={index} {...fish} />;
+      })}
     </div>
   );
 }

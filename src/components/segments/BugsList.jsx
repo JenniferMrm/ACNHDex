@@ -1,8 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import CreatureCard from "@/components/global/CreatureCard";
 
 function BugsList(props) {
   const [bugs, setBugs] = useState([]);
+
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
 
   useEffect(() => {
     const getBugs = () => {
@@ -14,11 +19,11 @@ function BugsList(props) {
           const formattedBugs = bugsKeys.map((key) => {
             return {
               image: data[key].image_uri,
-              name: data[key].name["name-EUfr"],
+              name: capitalizeFirstLetter(data[key].name["name-EUfr"]),
               location: data[key].availability["location"],
               rarity: data[key].availability["rarity"],
               price: data[key].price,
-              catchPhrase: data[key]["catchPhrase"],
+              infos: data[key]["catch-phrase"],
             };
           });
           setBugs(formattedBugs);
@@ -29,7 +34,9 @@ function BugsList(props) {
 
   return (
     <div className="bugs-list">
-      <h2>Bugs</h2>
+      {bugs.map((bug, index) => {
+        return <CreatureCard key={index} {...bug} />;
+      })}
     </div>
   );
 }
