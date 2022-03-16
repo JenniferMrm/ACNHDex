@@ -9,8 +9,8 @@ function CreatureCard({ image, name, location, rarity, price, infos }) {
       </div>
       <div className="creature-card__content">
         <p className="creature-card__content__species">Location: {location}</p>
-        <p className="creature-card__content__personnality">Rarity: {rarity}</p>
-        <p className="creature-card__content__birthday">Price: {price}</p>
+        <p className="creature-card__content__rarity">Rarity: {rarity}</p>
+        <p className="creature-card__content__price">Price: {price}</p>
         <p className="creature-card__content__catchPhrase">Catch phrase : {infos}</p>
       </div>
     </div>

@@ -1,0 +1,24 @@
+.art-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: $spacing-l;
+
+  @media #{$screen-tablet} {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  @media #{$screen-above-tablet} {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+}
+
+.art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

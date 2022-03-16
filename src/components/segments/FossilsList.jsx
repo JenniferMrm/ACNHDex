@@ -1,8 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import MuseumCard from "@/components/global/MuseumCard";
 
 function FossilsList(props) {
   const [fossils, setFossils] = useState([]);
+
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
 
   useEffect(() => {
     const getFossils = () => {
@@ -14,9 +19,9 @@ function FossilsList(props) {
           const formattedFossils = fossilsKeys.map((key) => {
             return {
               image: data[key].image_uri,
-              name: data[key].name["name-EUfr"],
+              name: capitalizeFirstLetter(data[key].name["name-EUfr"]),
               price: data[key].price,
-              information: data[key]["museum-phrase"],
+              infos: data[key]["museum-phrase"],
             };
           });
           setFossils(formattedFossils);
@@ -27,7 +32,9 @@ function FossilsList(props) {
 
   return (
     <div className="fossils-list">
-      <h2>Fossils</h2>
+      {fossils.map((fossil, index) => {
+        return <MuseumCard key={index} {...fossil} />;
+      })}
     </div>
   );
 }
