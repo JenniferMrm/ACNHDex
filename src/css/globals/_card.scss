@@ -34,7 +34,7 @@
 .creature-card {
   background-color: $neutral-color-00;
   margin: $spacing-m;
-  height: 320px;
+  height: fit-content;
   border-radius: 50px;
   display: flex;
   flex-direction: column;
@@ -54,7 +54,7 @@
     }
 
     &__name {
-      @include text-body-s;
+      @include text-body-m;
 
       width: 50%;
       margin: 0;
@@ -67,6 +67,7 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
+    margin-bottom: $spacing-m;
 
     p {
       margin: $spacing-s $spacing-m 0 $spacing-m;
@@ -88,19 +89,15 @@
         width: 150px;
         padding-right: $spacing-m;
       }
-
-      &__name {
-        @include text-body-m;
-
-        padding-left: $spacing-m;
-      }
     }
   }
 }
 
 .fishes-list {
   .creature-card {
-    height: 290px;
+    @media #{$screen-above-tablet} {
+      height: 290px;
+    }
 
     &__identity {
       &__image {
@@ -110,6 +107,75 @@
           width: 180px;
         }
       }
+    }
+  }
+}
+
+.museum-card {
+  background-color: $neutral-color-00;
+  margin: $spacing-m;
+  height: fit-content;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__identity {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: $spacing-s;
+
+    &__image {
+      width: 100px;
+    }
+
+    &__name {
+      @include text-body-m;
+
+      width: 50%;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    margin-bottom: $spacing-m;
+
+    p {
+      margin: $spacing-s $spacing-m 0 $spacing-m;
+    }
+  }
+
+  @media #{$screen-tablet} {
+    width: 600px;
+  }
+
+  @media #{$screen-above-tablet} {
+    width: 550px;
+    height: 420px;
+
+    &__identity {
+      flex-direction: row;
+
+      &__image {
+        width: 150px;
+        padding-right: $spacing-m;
+      }
+
+      &__name {
+        padding-left: $spacing-m;
+      }
+    }
+  }
+}
+
+.art-list {
+  .museum-card {
+    @media #{$screen-above-tablet} {
+      height: 370px;
     }
   }
 }

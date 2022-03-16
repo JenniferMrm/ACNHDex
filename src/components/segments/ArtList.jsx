@@ -1,9 +1,13 @@
 import axios from "axios";
-
 import React, { useEffect, useState } from "react";
+import MuseumCard from "@/components/global/MuseumCard";
 
 function ArtList(props) {
-  const [art, setArt] = useState([]);
+  const [arts, setArts] = useState([]);
+
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
 
   useEffect(() => {
     const getArt = () => {
@@ -15,20 +19,22 @@ function ArtList(props) {
           const formattedArt = artKeys.map((key) => {
             return {
               image: data[key].image_uri,
-              name: data[key].name["name-EUfr"],
+              name: capitalizeFirstLetter(data[key].name["name-EUfr"]),
               price: data[key]["buy-price"],
-              information: data[key]["museum-desc"],
+              infos: data[key]["museum-desc"],
             };
           });
-          setArt(formattedArt);
+          setArts(formattedArt);
         });
     };
     getArt();
-  });
+  }, []);
 
   return (
     <div className="art-list">
-      <h2>Art</h2>>
+      {arts.map((art, index) => {
+        return <MuseumCard key={index} {...art} />;
+      })}
     </div>
   );
 }
