@@ -26,7 +26,7 @@ function UpButton({ showBelow }) {
     <div className="up-button">
       {show && (
         <div className="up-button__container" onClick={handleClick} role="button">
-          <i class="fi fi-br-angle-up"></i>
+          <i className="fi fi-br-angle-up"></i>
         </div>
       )}
     </div>
