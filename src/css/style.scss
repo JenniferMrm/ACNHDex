@@ -6,6 +6,7 @@
 /* globals */
 @import "globals/card";
 @import "globals/up-button";
+@import "globals/inputs";
 
 /* segments */
 @import "segments/about";
@@ -15,9 +16,4 @@
 @import "layout/footer";
 
 /* view */
-@import "view/villagers";
 @import "view/not-found";
-@import "view/bugs";
-@import "view/fishes";
-@import "view/fossils";
-@import "view/art";

@@ -31,7 +31,7 @@ function FossilsList(props) {
   }, []);
 
   return (
-    <div className="fossils-list">
+    <div className="fossils-list list">
       {fossils.map((fossil, index) => {
         return <MuseumCard key={index} {...fossil} />;
       })}

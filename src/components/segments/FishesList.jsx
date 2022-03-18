@@ -33,7 +33,7 @@ function FishesList(props) {
   }, []);
 
   return (
-    <div className="fishes-list">
+    <div className="fishes-list list">
       {fishes.map((fish, index) => {
         return <CreatureCard key={index} {...fish} />;
       })}
