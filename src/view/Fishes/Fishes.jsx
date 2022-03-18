@@ -3,7 +3,7 @@ import FishesList from "@components/segments/FishesList";
 
 function Fishes(props) {
   return (
-    <div className="fishes">
+    <div className="fishes content">
       <FishesList />
     </div>
   );

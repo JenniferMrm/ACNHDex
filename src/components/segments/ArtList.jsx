@@ -31,7 +31,7 @@ function ArtList(props) {
   }, []);
 
   return (
-    <div className="art-list">
+    <div className="art-list list">
       {arts.map((art, index) => {
         return <MuseumCard key={index} {...art} />;
       })}

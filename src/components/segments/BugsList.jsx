@@ -33,7 +33,7 @@ function BugsList(props) {
   }, []);
 
   return (
-    <div className="bugs-list">
+    <div className="bugs-list list">
       {bugs.map((bug, index) => {
         return <CreatureCard key={index} {...bug} />;
       })}

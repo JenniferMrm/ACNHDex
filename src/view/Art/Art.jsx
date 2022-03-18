@@ -3,7 +3,7 @@ import ArtList from "@components/segments/ArtList";
 
 function Art(props) {
   return (
-    <div className="art">
+    <div className="art content">
       <ArtList />
     </div>
   );

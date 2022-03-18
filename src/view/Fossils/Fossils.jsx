@@ -3,7 +3,7 @@ import FossilsList from "@components/segments/FossilsList";
 
 function Fossils(props) {
   return (
-    <div className="fossils-list">
+    <div className="fossils content">
       <FossilsList />
     </div>
   );
