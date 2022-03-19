@@ -1,12 +1,18 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import MuseumCard from "@/components/global/MuseumCard";
+import InputSearch from "@components/global/InputSearch";
 
 function FossilsList(props) {
   const [fossils, setFossils] = useState([]);
+  const [searchName, setSearchName] = useState("");
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
+  const handleName = (e) => {
+    setSearchName(e.target.value);
   };
 
   useEffect(() => {
@@ -30,11 +36,27 @@ function FossilsList(props) {
     getFossils();
   }, []);
 
+  const getFilteredFossils = () => {
+    const filteredFossils = fossils.filter((fossil) => {
+      return fossil.name.toLowerCase().includes(searchName.toLowerCase());
+    });
+
+    if (!filteredFossils.length) return <span className="no-entry">No fossil found.</span>;
+
+    return filteredFossils.map((fossil, index) => {
+      return <MuseumCard key={index} {...fossil} />;
+    });
+  };
+
   return (
     <div className="fossils-list list">
-      {fossils.map((fossil, index) => {
-        return <MuseumCard key={index} {...fossil} />;
-      })}
+      <div className="fossils-list__filter filter">
+        <p className="fossils-list__filter__title">Filter by :</p>
+        <div className="fossils-list__filter__inputs search-bar">
+          <InputSearch searchValue={searchName} handleChange={handleName} />
+        </div>
+      </div>
+      {getFilteredFossils()}
     </div>
   );
 }
