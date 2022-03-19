@@ -92,7 +92,7 @@ function VillagersList(props) {
 
   return (
     <div className="villagers-list list">
-      <div className="villagers-list__filter ">
+      <div className="villagers-list__filter filter">
         <p className="villagers-list__filter__title">Filter by :</p>
         <div className="villagers-list__filter__inputs search-bar">
           <InputSearch searchValue={searchName} handleChange={handleName} />
