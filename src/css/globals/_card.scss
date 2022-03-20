@@ -179,3 +179,76 @@
     }
   }
 }
+
+.birthday-card {
+  @include card-pattern;
+
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $secondary-color-2;
+  border-radius: 50px;
+  padding: $spacing-m $spacing-m 0 $spacing-m;
+  margin: $spacing-m auto;
+
+  &__informations {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $neutral-color-00;
+    border-radius: 20px;
+
+    p {
+      @include text-body-s;
+
+      margin: $spacing-xs;
+    }
+  }
+
+  &__villager {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+
+  @media #{$screen-tablet} {
+    margin: $spacing-m auto;
+
+    &__informations {
+      flex-direction: row;
+
+      p {
+        @include text-body-m;
+
+        margin: $spacing-m;
+      }
+    }
+
+    &__villager {
+      flex-direction: row;
+    }
+  }
+
+  @media #{$screen-above-tablet} {
+    margin: $spacing-m;
+
+    &__informations {
+      flex-direction: row;
+
+      p {
+        @include text-body-m;
+
+        margin: $spacing-m;
+      }
+    }
+
+    &__villager {
+      flex-direction: row;
+    }
+  }
+}
