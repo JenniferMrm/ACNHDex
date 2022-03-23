@@ -22,7 +22,7 @@ function ArtList(props) {
           const formattedArt = artKeys.map((key) => {
             return {
               image: data[key].image_uri,
-              name: capitalizeFirstLetter(data[key].name["name-EUfr"]),
+              name: capitalizeFirstLetter(data[key].name["name-EUen"]),
               price: data[key]["buy-price"],
               infos: data[key]["museum-desc"],
             };
