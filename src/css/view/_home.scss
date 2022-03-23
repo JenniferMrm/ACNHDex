@@ -5,7 +5,15 @@
   align-items: space-around;
   padding-bottom: $spacing-l;
 
-  @media #{$screen-above-tablet} {
-    flex-direction: row;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+    padding-bottom: $spacing-l;
+
+    @media #{$screen-above-tablet} {
+      flex-direction: row;
+    }
   }
 }

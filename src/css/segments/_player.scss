@@ -1,0 +1,22 @@
+.player {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $neutral-color-00;
+  border-radius: 20px;
+  margin: $spacing-xs auto 0 auto;
+
+  &__figure {
+    display: flex;
+    align-items: center;
+
+    &__caption {
+      margin-right: $spacing-m;
+    }
+
+    audio {
+      border-radius: 20px;
+    }
+  }
+}
