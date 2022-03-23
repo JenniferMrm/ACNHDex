@@ -2,14 +2,11 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import MuseumCard from "@/components/global/MuseumCard";
 import InputSearch from "@components/global/InputSearch";
+import { capitalizeFirstLetter } from "@/helpers/functions";
 
 function ArtList(props) {
   const [arts, setArts] = useState([]);
   const [searchName, setSearchName] = useState("");
-
-  const capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
 
   const handleName = (e) => {
     setSearchName(e.target.value);
