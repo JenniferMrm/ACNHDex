@@ -15,19 +15,19 @@ $neutral-color-100: #000;
 $primary-color-1: #88c9a1;
 $primary-color-2: #ff7c69;
 $primary-color-3: #7cc9c3;
-$primary-color-4: #f5c24c;
+$primary-color-4: #ffbc79;
 
 /* secondary-colors */
 $secondary-color-1: #a4d4a2;
 $secondary-color-2: #febdc3;
 $secondary-color-3: #8ecfca;
-$secondary-color-4: #fcea64;
+$secondary-color-4: #ffd9b3;
 
 /* tertiary-colors */
 $tertiary-color-1: #68b893;
 $tertiary-color-2: #ef758a;
 $tertiary-color-3: #017c74;
-$tertiary-color-4: #f7d359;
+$tertiary-color-4: #ff9831;
 
 /* background-patterns */
 @mixin main-pattern {
@@ -117,7 +117,7 @@ $screen-tablet: "(min-width: 600px) and (max-width: 1200px)";
 $screen-above-tablet: "(min-width: 1201px)";
 
 /* Progress Bar */
-$seek-before-width: 100px;
-$seek-before-color: $primary-color-1;
-$knobby: $tertiary-color-1;
-$selected-knobby: $tertiary-color-3;
+$seek-before-width: 0;
+$seek-before-color: $primary-color-4;
+$knobby: $tertiary-color-4;
+$selected-knobby: $primary-color-2;

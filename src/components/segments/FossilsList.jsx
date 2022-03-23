@@ -22,7 +22,7 @@ function FossilsList(props) {
           const formattedFossils = fossilsKeys.map((key) => {
             return {
               image: data[key].image_uri,
-              name: capitalizeFirstLetter(data[key].name["name-EUfr"]),
+              name: capitalizeFirstLetter(data[key].name["name-EUen"]),
               price: data[key].price,
               infos: data[key]["museum-phrase"],
             };

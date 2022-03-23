@@ -21,7 +21,7 @@ function BirthdayCard(props) {
           const formattedVillagers = villagersKeys.map((key) => {
             return {
               image: data[key].image_uri,
-              name: data[key].name["name-EUfr"],
+              name: data[key].name["name-EUen"],
               species: data[key].species,
               personality: data[key].personality,
               birthday: data[key]["birthday-string"],

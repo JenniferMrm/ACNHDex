@@ -39,7 +39,7 @@ function BugsList(props) {
             sortedRarity.add(data[key].availability["rarity"]);
             return {
               image: data[key].image_uri,
-              name: capitalizeFirstLetter(data[key].name["name-EUfr"]),
+              name: capitalizeFirstLetter(data[key].name["name-EUen"]),
               location: data[key].availability["location"],
               rarity: data[key].availability["rarity"],
               price: data[key].price,
