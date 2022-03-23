@@ -1,0 +1,21 @@
+/* abstracts */
+@import "abstracts/reset";
+@import "abstracts/variables";
+@import "abstracts/base";
+
+/* globals */
+@import "globals/card";
+@import "globals/up-button";
+@import "globals/inputs";
+
+/* segments */
+@import "segments/about";
+@import "segments/player";
+
+/* layout */
+@import "layout/navigation";
+@import "layout/footer";
+
+/* view */
+@import "view/not-found";
+@import "view/home";

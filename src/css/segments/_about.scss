@@ -1,0 +1,41 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-m;
+
+  p {
+    @include text-body-s;
+
+    text-align: center;
+    margin: 0 $spacing-l;
+    line-height: 1.5;
+    color: $tertiary-color-2;
+    padding-bottom: $spacing-xl;
+
+    .link {
+      color: inherit;
+    }
+  }
+
+  @media #{$screen-tablet} {
+    padding: 5rem;
+
+    p {
+      @include text-body-m;
+
+      margin: 0 $spacing-xl;
+    }
+  }
+
+  @media #{$screen-above-tablet} {
+    padding: 10rem;
+
+    p {
+      @include text-body-m;
+
+      margin: 0 5rem;
+    }
+  }
+}

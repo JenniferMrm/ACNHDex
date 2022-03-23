@@ -1,0 +1,40 @@
+.up-button {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    z-index: 10;
+    position: fixed;
+    bottom: 9vh;
+    right: 3vh;
+    background-color: $tertiary-color-2;
+    transition: $basic-transition;
+
+    .fi {
+      color: $neutral-color-00;
+      transition: $basic-transition;
+    }
+
+    &:hover {
+      background-color: $secondary-color-2;
+      box-shadow: $basic-shadow;
+      cursor: pointer;
+
+      .fi {
+        color: $tertiary-color-3;
+      }
+    }
+
+    @media #{$screen-tablet} {
+      bottom: 6vh;
+      right: 2.5vh;
+    }
+
+    @media #{$screen-above-tablet} {
+      right: 3.4vh;
+    }
+  }
+}

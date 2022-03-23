@@ -1,0 +1,235 @@
+.modal {
+  @include modal-pattern;
+
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: $modal-transition;
+
+  &--open {
+    position: fixed;
+    opacity: 1;
+    left: 0;
+    z-index: 12;
+  }
+
+  &--closed {
+    left: -100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-xxl 0 0 $spacing-xl;
+    color: $neutral-color-00;
+
+    &__icon-cross {
+      width: min-content;
+      align-self: flex-end;
+      text-align: end;
+      margin-right: $spacing-xl;
+
+      .fi {
+        cursor: pointer;
+      }
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .fi {
+        margin-right: $spacing-xs;
+      }
+
+      &__link {
+        color: inherit;
+        text-decoration: none;
+
+        &__title {
+          @include text-body-m;
+
+          transition: $basic-transition;
+
+          &:hover {
+            color: $secondary-color-2;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$screen-tablet} {
+    display: none;
+  }
+
+  @media #{$screen-above-tablet} {
+    display: none;
+  }
+}
+
+.navbar {
+  width: 100%;
+  background-color: $primary-color-3;
+  height: 90px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: $spacing-m;
+
+    @media #{$screen-tablet} {
+      padding-top: 1.75rem;
+    }
+
+    @media #{$screen-above-tablet} {
+      padding-top: 1.25rem;
+    }
+
+    &__menu {
+      padding-left: $spacing-m;
+      color: $neutral-color-00;
+
+      .fi {
+        cursor: pointer;
+      }
+
+      @media #{$screen-tablet} {
+        display: none;
+      }
+
+      @media #{$screen-above-tablet} {
+        display: none;
+      }
+    }
+
+    &__logo {
+      width: calc(100% - 80px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media #{$screen-tablet} {
+        width: min-content;
+      }
+
+      @media #{$screen-above-tablet} {
+        width: min-content;
+      }
+
+      &__container {
+        background-color: $neutral-color-00;
+        position: relative;
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        margin-right: $spacing-xs;
+
+        &__img {
+          position: absolute;
+          top: 5px;
+          left: 4px;
+          width: 25px;
+        }
+      }
+
+      &__link {
+        color: inherit;
+        text-decoration: none;
+
+        &__title {
+          @include text-heading-l;
+
+          margin: 0;
+
+          @media #{$screen-tablet} {
+            @include text-heading-m;
+          }
+
+          @media #{$screen-above-tablet} {
+            @include text-heading-xl;
+          }
+        }
+      }
+
+      @media #{$screen-tablet} {
+        justify-content: flex-start;
+        padding: 0 $spacing-s;
+      }
+
+      @media #{$screen-above-tablet} {
+        justify-content: flex-start;
+        padding: 0 $spacing-xxl;
+      }
+    }
+
+    &__links {
+      display: none;
+
+      @media #{$screen-tablet} {
+        display: flex;
+        width: 100%;
+        padding: 0 $spacing-s 0 0;
+        justify-content: space-between;
+
+        &__item {
+          display: flex;
+          align-items: center;
+
+          &__link {
+            color: inherit;
+            text-decoration: none;
+
+            &__title {
+              @include text-body-s;
+
+              padding-left: 0.25rem;
+              margin: 0;
+              transition: $basic-transition;
+
+              &:hover {
+                color: $tertiary-color-3;
+              }
+            }
+          }
+        }
+      }
+
+      @media #{$screen-above-tablet} {
+        display: flex;
+        width: 100%;
+        padding: 0 $spacing-xxl;
+        justify-content: space-around;
+
+        &__item {
+          display: flex;
+          align-items: center;
+          padding-left: $spacing-xxl;
+
+          &__link {
+            color: inherit;
+            text-decoration: none;
+
+            &__title {
+              @include text-body-m;
+
+              padding-left: $spacing-xs;
+              margin: 0;
+              transition: $basic-transition;
+
+              &:hover {
+                color: $tertiary-color-3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
