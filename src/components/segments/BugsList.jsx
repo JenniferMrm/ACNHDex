@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import CreatureCard from "@/components/global/CreatureCard";
 import InputSearch from "@components/global/InputSearch";
 import InputSelect from "@components/global/InputSelect";
+import { capitalizeFirstLetter } from "@/helpers/functions";
 
 function BugsList(props) {
   const [bugs, setBugs] = useState([]);
@@ -11,10 +12,6 @@ function BugsList(props) {
   const [searchRarity, setSearchRarity] = useState("");
   const [locationOptions, setLocationOptions] = useState([]);
   const [rarityOptions, setRarityOptions] = useState([]);
-
-  const capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
 
   const handleName = (e) => {
     setSearchName(e.target.value);
