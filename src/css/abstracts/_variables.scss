@@ -32,9 +32,6 @@ $tertiary-color-4: #ff9831;
 /* background-patterns */
 @mixin main-pattern {
   background-color: $neutral-color-30;
-  background-image: radial-gradient($neutral-color-10, transparent 15%), radial-gradient($neutral-color-10, transparent 15%);
-  background-size: 30px 30px;
-  background-position: 0 0, 15px 15px;
 }
 
 @mixin modal-pattern {
