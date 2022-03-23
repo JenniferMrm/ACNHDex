@@ -115,3 +115,9 @@ $spacing-xxl: 3.5rem; // 56px
 /* Breakpoints */
 $screen-tablet: "(min-width: 600px) and (max-width: 1200px)";
 $screen-above-tablet: "(min-width: 1201px)";
+
+/* Progress Bar */
+$seek-before-width: 100px;
+$seek-before-color: $primary-color-1;
+$knobby: $tertiary-color-1;
+$selected-knobby: $tertiary-color-3;
