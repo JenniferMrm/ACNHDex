@@ -54,8 +54,8 @@ function AvailabilityCard(props) {
 
   const getFilteredCreatures = (category, creatures) => {
     const filteredCreatures = creatures.filter((creature) => {
-      if (creature.availabilityMonth.find((month) => month === thisMonth)) {
-        return creature.availabilityHour.find((hour) => hour === thisHour);
+      if (creature.availabilityMonth.some((month) => month === thisMonth)) {
+        return creature.availabilityHour.some((hour) => hour === thisHour);
       } else {
         return false;
       }
