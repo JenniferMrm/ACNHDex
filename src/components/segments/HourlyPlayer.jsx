@@ -27,11 +27,11 @@ function HourlyPlayer(props) {
           });
           setHourlyMusic(
             formattedHourlyMusic
-              .filter((bgmItem) => {
-                return bgmItem.weather === "Sunny";
+              .filter((music) => {
+                return music.weather === "Sunny";
               })
-              .find((bgmItem) => {
-                return bgmItem.hour === thisHour;
+              .find((music) => {
+                return music.hour === thisHour;
               })
           );
         });
