@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { IconArrowUp } from "../icons";
 
 function UpButton({ showBelow }) {
   const [show, setShow] = useState(showBelow ? false : true);
@@ -26,7 +27,7 @@ function UpButton({ showBelow }) {
     <div className="up-button">
       {show && (
         <div className="up-button__container" onClick={handleClick} role="button">
-          <i className="fi fi-br-angle-up"></i>
+          <IconArrowUp />
         </div>
       )}
     </div>

@@ -1,0 +1,13 @@
+.icon {
+  cursor: pointer;
+
+  svg {
+    width: 38px;
+    height: 38px;
+
+    path {
+      stroke: $neutral-color-90;
+      transition: $basic-transition;
+    }
+  }
+}
