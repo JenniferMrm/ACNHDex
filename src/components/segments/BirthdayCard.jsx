@@ -9,7 +9,8 @@ function BirthdayCard(props) {
   const customParseFormat = require("dayjs/plugin/customParseFormat");
   dayjs.extend(customParseFormat);
 
-  const today = dayjs().format("MMMM DD");
+  const todayDate = dayjs().format("D/M");
+  const todayString = dayjs().format("MMMM DD");
 
   useEffect(() => {
     const getVillagers = () => {
@@ -24,6 +25,7 @@ function BirthdayCard(props) {
               name: data[key].name["name-EUen"],
               species: data[key].species,
               personality: data[key].personality,
+              birthdayDate: data[key]["birthday"],
               birthday: data[key]["birthday-string"],
               catchPhrase: data[key]["catch-phrase"],
             };
@@ -36,7 +38,7 @@ function BirthdayCard(props) {
 
   const getBirthdayBoy = () => {
     const filteredVillagers = villagers.filter((villager) => {
-      return villager.birthday.includes(today);
+      return villager.birthdayDate === todayDate;
     });
 
     if (!filteredVillagers.length) return <span>No birthday today !</span>;
@@ -50,7 +52,7 @@ function BirthdayCard(props) {
     <div className="birthday-card">
       <div className="birthday-card__informations">
         <p className="birthday-card__informations__title">Today's birthday !</p>
-        <p className="birthday-card__informations__date">{today}</p>
+        <p className="birthday-card__informations__date">{todayString}</p>
       </div>
       <div className="birthday-card__villager">{getBirthdayBoy()}</div>
     </div>
