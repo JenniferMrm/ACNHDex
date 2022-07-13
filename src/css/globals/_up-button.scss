@@ -13,9 +13,15 @@
     background-color: $tertiary-color-2;
     transition: $basic-transition;
 
-    .fi {
-      color: $neutral-color-00;
-      transition: $basic-transition;
+    .icon {
+      svg {
+        width: 32px;
+
+        path {
+          stroke: $neutral-color-00;
+          transition: $basic-transition;
+        }
+      }
     }
 
     &:hover {
@@ -23,8 +29,12 @@
       box-shadow: $basic-shadow;
       cursor: pointer;
 
-      .fi {
-        color: $tertiary-color-3;
+      .icon {
+        svg {
+          path {
+            stroke: $tertiary-color-3;
+          }
+        }
       }
     }
 
