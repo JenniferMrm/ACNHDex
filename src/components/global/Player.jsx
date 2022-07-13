@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { calculateTime } from "@/helpers/functions";
+import { IconPause, IconPlay } from "../icons";
 
 function Player({ uri }) {
   // states
@@ -50,7 +51,7 @@ function Player({ uri }) {
     <div className="audio-player">
       <audio ref={audioPlayer} src={uri} preload="metadata" onLoadedMetadata={onLoadedMetadata} />
       <button className="audio-player__play-pause" onClick={togglePlayPause}>
-        {isPlaying ? <i className="fi fi-br-pause"></i> : <i className="fi fi-br-play"></i>}
+        {isPlaying ? <IconPause /> : <IconPlay />}
       </button>
       <div className="audio-player__current-time">{calculateTime(currentTime)}</div>
       <div className="audio-player__progress-bar">

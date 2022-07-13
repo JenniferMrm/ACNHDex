@@ -58,11 +58,19 @@
     background: none;
     border: 1px solid $tertiary-color-4;
     border-radius: 100%;
-    padding: 8px 8px 3px;
     transition: $basic-transition;
 
-    .fi {
-      color: $tertiary-color-4;
+    .icon {
+      padding: 4px 1px 0;
+
+      svg {
+        width: 25px;
+        height: 25px;
+
+        path {
+          stroke: $tertiary-color-4;
+        }
+      }
     }
   }
 

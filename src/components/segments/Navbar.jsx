@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "@components/global/Modal";
 import { Link } from "react-router-dom";
+import { IconArt, IconBug, IconCreature, IconFish, IconFossil, IconMenuBurger } from "../icons";
 
 function Navbar(props) {
   const [open, setOpen] = useState(false);
@@ -17,7 +18,7 @@ function Navbar(props) {
     <div className="navbar">
       <div className="navbar__container">
         <div className="navbar__container__menu" onClick={openModal}>
-          <i className="fi fi-br-menu-burger"></i>
+          <IconMenuBurger />
         </div>
         <div className="navbar__container__logo">
           <Link to={"/"}>
@@ -31,31 +32,31 @@ function Navbar(props) {
         </div>
         <div className="navbar__container__links">
           <div className="navbar__container__links__item">
-            <i className="fi fi-br-fox"></i>
+            <IconCreature />
             <Link to={"/villagers"} className="navbar__container__links__item__link">
               <p className="navbar__container__links__item__link__title">Villagers</p>
             </Link>
           </div>
           <div className="navbar__container__links__item">
-            <i className="fi fi-br-fish"></i>
+            <IconFish />
             <Link to={"/fishes"} className="navbar__container__links__item__link">
               <p className="navbar__container__links__item__link__title">Fishes</p>
             </Link>
           </div>
           <div className="navbar__container__links__item">
-            <i className="fi fi-br-butterfly"></i>
+            <IconBug />
             <Link to={"/bugs"} className="navbar__container__links__item__link">
               <p className="navbar__container__links__item__link__title">Bugs</p>
             </Link>
           </div>
           <div className="navbar__container__links__item">
-            <i className="fi fi-br-paw"></i>
+            <IconFossil />
             <Link to={"/fossils"} className="navbar__container__links__item__link">
               <p className="navbar__container__links__item__link__title">Fossils</p>
             </Link>
           </div>
           <div className="navbar__container__links__item">
-            <i className="fi fi-br-paint-brush"></i>
+            <IconArt />
             <Link to={"/art"} className="navbar__container__links__item__link">
               <p className="navbar__container__links__item__link__title">Art</p>
             </Link>

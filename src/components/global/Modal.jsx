@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { IconArt, IconBug, IconClose, IconCreature, IconFish, IconFossil, IconHome } from "../icons";
 
 function Modal({ onClose, open }) {
   const modalClassName = open ? "modal modal--open" : "modal modal--closed";
@@ -8,40 +9,40 @@ function Modal({ onClose, open }) {
     <div className={modalClassName}>
       <div className="modal__content">
         <div className="modal__content__icon-cross" onClick={onClose}>
-          <i className="fi fi-br-cross"></i>
+          <IconClose />
         </div>
         <div className="modal__content__icon">
-          <i className="fi fi-br-home"></i>
+          <IconHome />
           <Link to={"/"} className="modal__content__icon__link" onClick={onClose}>
             <p className="modal__content__icon__link__title">Home</p>
           </Link>
         </div>
         <div className="modal__content__icon">
-          <i className="fi fi-br-fox"></i>
+          <IconCreature />
           <Link to={"/villagers"} className="modal__content__icon__link" onClick={onClose}>
             <p className="modal__content__icon__link__title">Villagers</p>
           </Link>
         </div>
         <div className="modal__content__icon">
-          <i className="fi fi-br-fish"></i>
+          <IconFish />
           <Link to={"/fishes"} className="modal__content__icon__link" onClick={onClose}>
             <p className="modal__content__icon__link__title">Fishes</p>
           </Link>
         </div>
         <div className="modal__content__icon">
-          <i className="fi fi-br-butterfly"></i>
+          <IconBug />
           <Link to={"/bugs"} className="modal__content__icon__link" onClick={onClose}>
             <p className="modal__content__icon__link__title">Bugs</p>
           </Link>
         </div>
         <div className="modal__content__icon">
-          <i className="fi fi-br-paw"></i>
+          <IconFossil />
           <Link to={"/fossils"} className="modal__content__icon__link" onClick={onClose}>
             <p className="modal__content__icon__link__title">Fossils</p>
           </Link>
         </div>
         <div className="modal__content__icon">
-          <i className="fi fi-br-paint-brush"></i>
+          <IconArt />
           <Link to={"/art"} className="modal__content__icon__link" onClick={onClose}>
             <p className="modal__content__icon__link__title">Art</p>
           </Link>
